@@ -10,7 +10,8 @@
 
 <body>
     <header>
-        <h1>Balatro - Jokers</h1>
+        <h1>Balatro</h1>
+        <img id="logo" src="./images/logo.png">
         <nav>
             <a href="index.html">Principal</a>
             <a href="como-jugar.html">¿Cómo jugar?</a>
@@ -19,8 +20,18 @@
         </nav>
     </header>
     <main>
+        <section class="container">
+            <h2 style="margin-top: 0;">Cartas de Jokers</h2>
+            <div class="textos">Los Jokers son las diferentes cartas que podemos comprar a lo largo de la partida que
+                modificarán
+                nuestras jugadas, a veces de maneras beneficiosas y a veces de forma negativas, dependiendo la
+                situación.
+                ¡Por suerte hay muchos donde elegir!
+            </div>
+            <h3>¡Aquí os dejo unos pocos!</h3>
+        </section>
         <section>
-            <h2>Cartas de Jokers</h2>
+
             <div class="card-grid">
                 <!-- Carta 1 -->
                 <div class="card"
@@ -184,12 +195,47 @@
                     data-description="El Joker de Oro duplica el valor de las cartas jugadas durante la ronda actual.">
                     <img src="images/Golden_Joker.png" alt="Carta de Joker de Oro">
                 </div>
+                <!-- Carta 37 -->
+                <div class="card"
+                    data-description="El Joker Espacial otorga un multiplicador adicional por cada carta jugada del palo de estrellas.">
+                    <img src="images/Space_Joker.png" alt="Carta de Joker Espacial">
+                </div>
+                <!-- Carta 38 -->
+                <div class="card"
+                    data-description="El Bufón Errante aumenta el multiplicador basado en la cantidad de descartes restantes.">
+                    <img src="images/Vagabond.png" alt="Carta de Bufón Errante">
+                </div>
+                <!-- Carta 39 -->
+                <div class="card"
+                    data-description="La Daga Ceremonial otorga un efecto especial al combinarla con cartas del mismo rango.">
+                    <img src="images/Ceremonial_Dagger.png" alt="Carta de Daga Ceremonial">
+                </div>
+                <!-- Carta 41 -->
+                <div class="card"
+                    data-description="El Stuntman permite al jugador descartar hasta tres cartas sin perder turnos.">
+                    <img src="images/Stuntman.png" alt="Carta de Stuntman">
+                </div>
+                <!-- Carta 42 -->
+                <div class="card"
+                    data-description="El Comodín Quemado otorga un multiplicador alto, pero elimina una carta de la mano jugada.">
+                    <img src="images/Burnt_Joker.png" alt="Carta de Comodín Quemado">
+                </div>
+                <!-- Carta para Wee Joker -->
+                <div class="card"
+                    data-description="El Wee Joker permite al jugador duplicar el efecto de la carta con el rango más bajo de la mano jugada.">
+                    <img src="images/Wee_Joker.png" alt="Carta de Wee Joker">
+                </div>
 
+                <!-- Carta para Blueprint -->
+                <div class="card"
+                    data-description="El Blueprint otorga un bono al multiplicador basado en el número de cartas de estrategia jugadas en la ronda actual.">
+                    <img src="images/Blueprint.png" alt="Carta de Blueprint">
+                </div>
             </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Balatro. Todos los derechos reservados.</p>
+        <p>&copy; 2024 David Besada. No tengo ni derechos para reservar.</p>
     </footer>
 
     <div class="modal" id="card-modal">
@@ -222,6 +268,15 @@
                     modal.style.display = 'none';
                 }
             });
+        });
+        // Seleccionar todos los elementos con la clase 'flotar'
+        const elementos = document.querySelectorAll('.card');
+
+        elementos.forEach(elemento => {
+            // Generar un retraso aleatorio entre 0 y 2 segundos
+            const delay = Math.random() * 2;
+            // Aplicar el retraso a cada elemento
+            elemento.style.animationDelay = `${delay}s`;
         });
     </script>
 </body>
