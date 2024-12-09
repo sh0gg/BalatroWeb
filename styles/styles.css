@@ -12,6 +12,53 @@
     }
 }
 
+@media (max-width: 768px) {
+    .comoJugar {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        gap: 15px;
+        
+    }
+
+    .textos,
+    .videos,
+    .imagenes {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .videos iframe {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .comoJugar {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .textos,
+    .videos,
+    .imagenes {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .videos iframe {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -106,6 +153,15 @@ h2 {
     border-radius: 5px;
     flex: 1;
     max-width: 60%;
+}
+
+.textos a {
+    color: #a1d1fd;
+    text-decoration: none;
+}
+
+.textos a:hover {
+    text-decoration: underline;
 }
 
 .videos {
